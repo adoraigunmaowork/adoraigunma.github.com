@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Adora Igunma – Learning & Development Specialist and Instructional Designer. Portfolio of L&D work, eLearning, curriculum design, and facilitation."/>
+<title>Adora Igunma | L&D Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #F5F2EC;
+    color: #1a1a1a;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(245,242,236,0.93);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #ddd9d0;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0.85rem 2.5rem;
+  }
+  .nav-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.05rem; color: #1a1a1a;
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    text-decoration: none; font-size: 0.82rem; font-weight: 500;
+    color: #555; letter-spacing: 0.08em; text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: #2B5C4B; }
+  .nav-toggle { display: none; background: none; border: none; cursor: pointer; font-size: 1.4rem; color: #1a1a1a; }
+
+  /* SECTIONS */
+  section { padding: 5rem 2.5rem; max-width: 900px; margin: 0 auto; }
+
+  /* HERO */
+  #hero {
+    padding-top: 7rem; padding-bottom: 5rem;
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 3rem; align-items: center;
+  }
+  .hero-tag {
+    display: inline-block; background: #2B5C4B; color: #e8f4f0;
+    font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em;
+    text-transform: uppercase; padding: 0.3rem 0.75rem;
+    border-radius: 2rem; margin-bottom: 1rem;
+  }
+  .hero-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2rem, 4.5vw, 3rem);
+    line-height: 1.15; margin-bottom: 1.25rem;
+  }
+  .hero-title em { font-style: italic; color: #2B5C4B; }
+  .hero-subtitle { font-size: 0.97rem; color: #555; line-height: 1.8; margin-bottom: 1.75rem; }
+  .cta-row { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary {
+    background: #2B5C4B; color: #fff; border: none;
+    padding: 0.7rem 1.5rem; border-radius: 2rem;
+    font-family: 'DM Sans', sans-serif; font-size: 0.88rem; font-weight: 500;
+    cursor: pointer; transition: background 0.2s, transform 0.1s;
+    text-decoration: none; display: inline-block;
+  }
+  .btn-primary:hover { background: #1f4437; transform: translateY(-1px); }
+  .btn-ghost {
+    background: transparent; color: #2B5C4B;
+    border: 1.5px solid #2B5C4B; padding: 0.7rem 1.5rem;
+    border-radius: 2rem; font-family: 'DM Sans', sans-serif;
+    font-size: 0.88rem; font-weight: 500; cursor: pointer;
+    transition: background 0.2s; text-decoration: none; display: inline-block;
+  }
+  .btn-ghost:hover { background: rgba(43,92,75,0.06); }
+
+  .hero-right {
+    background: #fff; border-radius: 1.5rem;
+    padding: 2rem; border: 1px solid #ddd9d0;
+  }
+  .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .stat-box {
+    background: #F5F2EC; border-radius: 1rem;
+    padding: 1.25rem 1rem; text-align: center;
+  }
+  .stat-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2rem; color: #2B5C4B; display: block;
+  }
+  .stat-lbl { font-size: 0.75rem; color: #777; letter-spacing: 0.05em; text-transform: uppercase; }
+  .hero-quote {
+    margin-top: 1.25rem; border-left: 3px solid #2B5C4B;
+    padding-left: 1rem; font-size: 0.9rem; color: #555;
+    font-style: italic; line-height: 1.6;
+  }
+
+  /* FULL WIDTH */
+  .full-width-section { background: #fff; width: 100%; padding: 5rem 0; }
+  .full-width-section .inner { max-width: 900px; margin: 0 auto; padding: 0 2.5rem; }
+
+  .section-label {
+    font-size: 0.72rem; font-weight: 500; letter-spacing: 0.15em;
+    text-transform: uppercase; color: #2B5C4B; margin-bottom: 0.75rem;
+  }
+  .section-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.9rem; line-height: 1.25; margin-bottom: 1.25rem;
+  }
+
+  /* ABOUT */
+  .about-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 4rem; align-items: start; }
+  .skills-block h4 {
+    font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em;
+    text-transform: uppercase; color: #999;
+    margin-bottom: 0.5rem; margin-top: 1.25rem;
+  }
+  .skills-block h4:first-child { margin-top: 0; }
+  .tag-list { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.25rem; }
+  .tag {
+    font-size: 0.72rem; background: #EBF4F0; color: #1f5040;
+    padding: 0.25rem 0.65rem; border-radius: 2rem; font-weight: 500;
+  }
+  .tag.gray { background: #EDECE8; color: #444; }
+
+  /* PROJECTS */
+  .projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2.5rem; }
+  .project-card {
+    background: #fff; border-radius: 1.25rem;
+    border: 1px solid #ddd9d0; padding: 1.75rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .project-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.07); }
+  .project-type {
+    font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em;
+    text-transform: uppercase; color: #2B5C4B; margin-bottom: 0.75rem;
+  }
+  .project-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.2rem; margin-bottom: 0.75rem; line-height: 1.3;
+  }
+  .project-desc { font-size: 0.88rem; color: #666; line-height: 1.65; margin-bottom: 1.25rem; }
+  .project-card.featured {
+    background: #2B5C4B; border-color: #2B5C4B;
+    grid-column: span 2;
+    display: grid; grid-template-columns: 1.3fr 1fr; gap: 2.5rem;
+  }
+  .project-card.featured .project-type { color: #a8d5c4; }
+  .project-card.featured .project-title { color: #fff; font-size: 1.55rem; }
+  .project-card.featured .project-desc { color: #c5e0d8; }
+  .project-card.featured .tag { background: rgba(255,255,255,0.15); color: #e0f4ee; }
+  .featured-right { display: flex; flex-direction: column; justify-content: center; gap: 1.25rem; }
+  .impact-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.2rem; color: #fff; display: block; line-height: 1;
+  }
+  .impact-desc { font-size: 0.83rem; color: #a8d5c4; margin-top: 0.2rem; }
+
+  /* SAMPLES */
+  .samples-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2.5rem; }
+  .sample-card {
+    background: #fff; border-radius: 1.25rem;
+    border: 1px solid #ddd9d0; overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex; flex-direction: column;
+  }
+  .sample-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+  .sample-preview {
+    height: 160px; display: flex;
+    align-items: center; justify-content: center;
+    font-size: 3rem; position: relative; overflow: hidden;
+  }
+  .sample-preview.green  { background: linear-gradient(135deg, #1f4437 0%, #2B5C4B 60%, #3d7a66 100%); }
+  .sample-preview.teal   { background: linear-gradient(135deg, #0a4a5c 0%, #0e6b80 60%, #1a8fa8 100%); }
+  .sample-preview.amber  { background: linear-gradient(135deg, #5c3a0a 0%, #8a5a12 60%, #b87d1a 100%); }
+  .sample-preview.purple { background: linear-gradient(135deg, #2e1f5c 0%, #4a3480 60%, #6650a4 100%); }
+  .preview-label {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    background: rgba(0,0,0,0.35); color: #fff;
+    font-size: 0.72rem; font-weight: 500; letter-spacing: 0.08em;
+    text-transform: uppercase; padding: 0.5rem 1rem;
+  }
+  .sample-body { padding: 1.25rem 1.5rem 1.5rem; flex: 1; display: flex; flex-direction: column; }
+  .sample-type {
+    font-size: 0.7rem; font-weight: 500; letter-spacing: 0.1em;
+    text-transform: uppercase; color: #2B5C4B; margin-bottom: 0.5rem;
+  }
+  .sample-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.1rem; line-height: 1.3; margin-bottom: 0.6rem;
+  }
+  .sample-desc { font-size: 0.85rem; color: #666; line-height: 1.6; flex: 1; margin-bottom: 1rem; }
+  .sample-link {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    background: #2B5C4B; color: #fff; text-decoration: none;
+    font-size: 0.82rem; font-weight: 500;
+    padding: 0.55rem 1.1rem; border-radius: 2rem;
+    transition: background 0.2s; align-self: flex-start;
+  }
+  .sample-link:hover { background: #1f4437; }
+
+  /* APPROACH */
+  .process-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.25rem; margin-top: 2.5rem; }
+  .process-step { padding: 1.5rem 1.25rem; background: #F5F2EC; border-radius: 1rem; }
+  .step-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.5rem; color: #d9d4c8; line-height: 1; margin-bottom: 0.5rem;
+  }
+  .step-name { font-weight: 500; font-size: 0.95rem; margin-bottom: 0.4rem; color: #2B5C4B; }
+  .step-desc { font-size: 0.82rem; color: #666; line-height: 1.55; }
+
+  /* CONTACT */
+  #contact { text-align: center; padding-bottom: 7rem; }
+  .contact-box {
+    background: #2B5C4B; color: #fff;
+    border-radius: 1.5rem; padding: 3.5rem; margin-top: 1rem;
+  }
+  .contact-box .section-title { color: #fff; margin-bottom: 0.75rem; }
+  .contact-box p { color: #a8d5c4; margin-bottom: 2rem; font-size: 1rem; }
+  .contact-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  .btn-white {
+    background: #fff; color: #2B5C4B; border: none;
+    padding: 0.75rem 1.75rem; border-radius: 2rem;
+    font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 500;
+    cursor: pointer; text-decoration: none; transition: opacity 0.2s;
+  }
+  .btn-white:hover { opacity: 0.9; }
+  .btn-outline-white {
+    background: transparent; color: #fff;
+    border: 1.5px solid rgba(255,255,255,0.5);
+    padding: 0.75rem 1.75rem; border-radius: 2rem;
+    font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 500;
+    cursor: pointer; text-decoration: none; transition: border-color 0.2s;
+  }
+  .btn-outline-white:hover { border-color: #fff; }
+
+  footer {
+    text-align: center; font-size: 0.8rem; color: #aaa;
+    padding: 2rem; border-top: 1px solid #ddd9d0;
+  }
+
+  /* ANIMATIONS */
+  .fade-in { opacity: 0; transform: translateY(18px); transition: opacity 0.55s ease, transform 0.55s ease; }
+  .fade-in.visible { opacity: 1; transform: none; }
+
+  /* MOBILE */
+  @media (max-width: 700px) {
+    nav { padding: 0.85rem 1.25rem; }
+    .nav-links { display: none; flex-direction: column; gap: 0; position: absolute; top: 57px; left: 0; right: 0; background: #F5F2EC; border-bottom: 1px solid #ddd9d0; padding: 1rem 1.5rem; }
+    .nav-links.open { display: flex; }
+    .nav-links li { padding: 0.5rem 0; border-bottom: 1px solid #ece9e2; }
+    .nav-links li:last-child { border-bottom: none; }
+    .nav-toggle { display: block; }
+    #hero { grid-template-columns: 1fr; padding-top: 4rem; }
+    .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .projects-grid { grid-template-columns: 1fr; }
+    .project-card.featured { grid-column: span 1; grid-template-columns: 1fr; }
+    .samples-grid { grid-template-columns: 1fr; }
+    .process-grid { grid-template-columns: 1fr 1fr; }
+    section { padding: 3rem 1.25rem; }
+    .full-width-section .inner { padding: 0 1.25rem; }
+    .contact-box { padding: 2rem 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-name">Adora Igunma</a>
+  <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+  <ul class="nav-links">
+    <li><a href="#about" onclick="document.querySelector('.nav-links').classList.remove('open')">About</a></li>
+    <li><a href="#projects" onclick="document.querySelector('.nav-links').classList.remove('open')">Work</a></li>
+    <li><a href="#samples" onclick="document.querySelector('.nav-links').classList.remove('open')">Samples</a></li>
+    <li><a href="#approach" onclick="document.querySelector('.nav-links').classList.remove('open')">Approach</a></li>
+    <li><a href="#contact" onclick="document.querySelector('.nav-links').classList.remove('open')">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="fade-in">
+    <span class="hero-tag">Learning &amp; Development · Instructional Design</span>
+    <h1 class="hero-title">Designing learning that <em>transforms</em> people &amp; organizations.</h1>
+    <p class="hero-subtitle">I'm an L&D specialist and instructional designer with 8+ years building learner-centered programs across education, nonprofit, and corporate environments — from classroom to eLearning, from Canada to Africa.</p>
+    <div class="cta-row">
+      <a href="#samples" class="btn-primary">View samples</a>
+      <a href="#contact" class="btn-ghost">Get in touch</a>
+    </div>
+  </div>
+  <div class="hero-right fade-in" style="transition-delay:0.15s">
+    <div class="stat-grid">
+      <div class="stat-box"><span class="stat-num">8+</span><span class="stat-lbl">Years in L&D</span></div>
+      <div class="stat-box"><span class="stat-num">5,000+</span><span class="stat-lbl">Educators Reached</span></div>
+      <div class="stat-box"><span class="stat-num">70</span><span class="stat-lbl">Schools Supported</span></div>
+      <div class="stat-box"><span class="stat-num">100+</span><span class="stat-lbl">Sessions Facilitated</span></div>
+    </div>
+    <p class="hero-quote">"Learning is most powerful when it's designed around the learner — not just the content."</p>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<div id="about" class="full-width-section">
+  <div class="inner">
+    <div class="about-grid">
+      <div class="fade-in">
+        <p class="section-label">About me</p>
+        <h2 class="section-title">EDI-informed L&D leader, instructional designer, community builder.</h2>
+        <p style="color:#555; margin-bottom:1rem; line-height:1.8;">I hold a Master's in Curriculum and Instruction (UNB, Canada) and bring a rare combination: deep instructional design expertise, real-world LMS administration experience, and a track record of building learning programs that reach thousands of people across multiple countries.</p>
+        <p style="color:#555; margin-bottom:1rem; line-height:1.8;">I founded The Fresh Look Africa — a professional learning organization serving 5,000+ educators across Africa — and have led EDI-focused learning initiatives across 70 schools in New Brunswick. I'm equally comfortable designing a Storyline eLearning module as I am facilitating a live workshop or leading a train-the-trainer program.</p>
+        <p style="color:#555; line-height:1.8;">Currently available as an L&D Consultant and actively seeking full-time opportunities. Remote-ready.</p>
+      </div>
+      <div class="skills-block fade-in" style="transition-delay:0.1s">
+        <h4>L&D Tools</h4>
+        <div class="tag-list">
+          <span class="tag">Articulate Storyline 360</span>
+          <span class="tag">Articulate Rise</span>
+          <span class="tag">Canvas LMS</span>
+          <span class="tag">Tutor LMS</span>
+          <span class="tag">WordPress</span>
+          <span class="tag">Canva</span>
+          <span class="tag">Adobe Premiere Pro</span>
+        </div>
+        <h4>Methods</h4>
+        <div class="tag-list">
+          <span class="tag">ADDIE</span>
+          <span class="tag">Training Needs Analysis</span>
+          <span class="tag">Adult Learning Principles</span>
+          <span class="tag">Kirkpatrick Evaluation</span>
+          <span class="tag">VR/AR Learning</span>
+          <span class="tag">Train-the-Trainer</span>
+        </div>
+        <h4>Specialisms</h4>
+        <div class="tag-list">
+          <span class="tag">EDI-Informed Design</span>
+          <span class="tag">Virtual Facilitation</span>
+          <span class="tag">Communities of Practice</span>
+          <span class="tag">Curriculum Development</span>
+        </div>
+        <h4>Education</h4>
+        <div class="tag-list">
+          <span class="tag gray">M.Ed – UNB Canada</span>
+          <span class="tag gray">M.Sc – U of Lagos</span>
+          <span class="tag gray">ELVTR ID Certification</span>
+          <span class="tag gray">Microsoft Certified Educator</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="fade-in">
+    <p class="section-label">Selected work</p>
+    <h2 class="section-title">Projects &amp; Case Studies</h2>
+  </div>
+  <div class="projects-grid">
+
+    <div class="project-card featured fade-in">
+      <div>
+        <p class="project-type">★ Featured · Founder-Led Initiative</p>
+        <h3 class="project-title">The Fresh Look Africa — Skilled Teacher Academy</h3>
+        <p class="project-desc">Founded and scaled a professional learning organization serving 5,000+ educators across Africa. Designed and delivered 6 cohorts of the Skilled Teacher Academy — an outcomes-based, LMS-hosted professional development program with structured learning pathways, facilitated communities of practice, and learner evaluation systems.</p>
+        <div class="tag-list" style="margin-top:1rem;">
+          <span class="tag">Curriculum Design</span>
+          <span class="tag">LMS Administration</span>
+          <span class="tag">Communities of Practice</span>
+          <span class="tag">Remote Team Leadership</span>
+          <span class="tag">Program Evaluation</span>
+        </div>
+      </div>
+      <div class="featured-right">
+        <div><span class="impact-num">5,000+</span><p class="impact-desc">Educators reached across Africa</p></div>
+        <div><span class="impact-num">6</span><p class="impact-desc">Cohorts of Skilled Teacher Academy delivered</p></div>
+        <div><span class="impact-num">10</span><p class="impact-desc">Remote team members led across multiple countries</p></div>
+      </div>
+    </div>
+
+    <div class="project-card fade-in">
+      <p class="project-type">EDI Training · School District</p>
+      <h3 class="project-title">Equity &amp; Inclusion Learning Program — ASD-W</h3>
+      <p class="project-desc">Designed and facilitated 25+ workshops and learning modules for educators across 70 schools in New Brunswick. Conducted needs analyses, aligned training to district strategic priorities, and introduced the district's first VR/AR-based learning experiences for equity-focused training.</p>
+      <div class="tag-list">
+        <span class="tag">Workshop Facilitation</span>
+        <span class="tag">VR/AR Learning</span>
+        <span class="tag">Needs Analysis</span>
+        <span class="tag">EDI</span>
+      </div>
+    </div>
+
+    <div class="project-card fade-in" style="transition-delay:0.1s">
+      <p class="project-type">Community Facilitation · Nonprofit</p>
+      <h3 class="project-title">Diversity &amp; Anti-Racism Learning Sessions — MCAF</h3>
+      <p class="project-desc">Delivered 100+ facilitated learning sessions annually across schools and community organizations in Fredericton. Designed multimedia learning modules using adult learning principles and partnered with digital media teams to create technology-enhanced training materials.</p>
+      <div class="tag-list">
+        <span class="tag">Multimedia Design</span>
+        <span class="tag">Adult Learning</span>
+        <span class="tag">Community Education</span>
+        <span class="tag">Evaluation</span>
+      </div>
+    </div>
+
+    <div class="project-card fade-in">
+      <p class="project-type">L&amp;D Consulting · Independent</p>
+      <h3 class="project-title">L&amp;D Consulting — Independent Practice</h3>
+      <p class="project-desc">Partnering with organizations to identify learning needs, design training solutions, and develop scalable learning programs. Creating instructional materials, curricula, and facilitator resources aligned with adult learning principles and business objectives.</p>
+      <div class="tag-list">
+        <span class="tag">Needs Analysis</span>
+        <span class="tag">Instructional Design</span>
+        <span class="tag">Program Evaluation</span>
+        <span class="tag">Stakeholder Engagement</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SAMPLES -->
+<div id="samples" class="full-width-section">
+  <div class="inner">
+    <div class="fade-in">
+      <p class="section-label">Portfolio samples</p>
+      <h2 class="section-title">See the work up close.</h2>
+      <p style="color:#666; line-height:1.75; max-width:620px; margin-bottom:0;">Real artifacts from real projects — instructional design, eLearning, job aids, curriculum resources, and LMS-ready courses.</p>
+    </div>
+    <div class="samples-grid">
+
+      <div class="sample-card fade-in">
+        <div class="sample-preview green">
+          <span style="font-size:2.5rem;">🎯</span>
+          <span class="preview-label">Instructional Design · Articulate</span>
+        </div>
+        <div class="sample-body">
+          <p class="sample-type">Instructional Design &amp; eLearning</p>
+          <h3 class="sample-title">ID Portfolio — Articulate Storyline Work</h3>
+          <p class="sample-desc">Showcases my full instructional design process and Articulate Storyline course development — from storyboarding through to interactive eLearning output.</p>
+          <a href="https://www.canva.com/design/DAG_5HpKGIc/uKdqSUXRyj8XMqjc34CSuQ/view?utm_content=DAG_5HpKGIc&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hff98d32848#2" class="sample-link" target="_blank" rel="noopener">View Sample ↗</a>
+        </div>
+      </div>
+
+      <div class="sample-card fade-in" style="transition-delay:0.1s">
+        <div class="sample-preview teal">
+          <span style="font-size:2.5rem;">📚</span>
+          <span class="preview-label">Job Aids · Digital Library · MCAF</span>
+        </div>
+        <div class="sample-body">
+          <p class="sample-type">Job Aids &amp; Curriculum Resources</p>
+          <h3 class="sample-title">TFLA Digital Library &amp; MCAF Learning Booklet</h3>
+          <p class="sample-desc">Job aids showing the TFLA digital library structure and the DIAR learning booklet designed for MCAF — a curriculum resource for diversity and anti-racism facilitation.</p>
+          <a href="https://www.canva.com/design/DAG_5cf8KXA/144cutEchoWwlHVQoboccQ/view?utm_content=DAG_5cf8KXA&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h40dc9e41e5#1" class="sample-link" target="_blank" rel="noopener">View Sample ↗</a>
+        </div>
+      </div>
+
+      <div class="sample-card fade-in">
+        <div class="sample-preview amber">
+          <span style="font-size:2.5rem;">🔍</span>
+          <span class="preview-label">Needs Analysis · ASD-W</span>
+        </div>
+        <div class="sample-body">
+          <p class="sample-type">Needs Analysis to Design — ASD-W</p>
+          <h3 class="sample-title">Full-Cycle ID: Needs Analysis through Program Design</h3>
+          <p class="sample-desc">Documents my full ADDIE process with the Anglophone West School District — from stakeholder consultation and gap analysis through to workshop design and delivery across 70 schools.</p>
+          <a href="https://www.canva.com/design/DAG_44_nn-8/NxpMaWKcqDrPOw6YHmenKA/view?utm_content=DAG_44_nn-8&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h87d74b9dab#1" class="sample-link" target="_blank" rel="noopener">View Sample ↗</a>
+        </div>
+      </div>
+
+      <div class="sample-card fade-in" style="transition-delay:0.1s">
+        <div class="sample-preview purple">
+          <span style="font-size:2.5rem;">💻</span>
+          <span class="preview-label">LMS Course · Tutor LMS</span>
+        </div>
+        <div class="sample-body">
+          <p class="sample-type">LMS-Compatible Course &amp; Administration</p>
+          <h3 class="sample-title">LMS Course Design &amp; Platform Management</h3>
+          <p class="sample-desc">Demonstrates my LMS-hosted course design using Tutor LMS — including course structure, learner enrollment, progress tracking, and platform administration for the Skilled Teacher Academy.</p>
+          <a href="https://www.canva.com/design/DAG_5HpKGIc/uKdqSUXRyj8XMqjc34CSuQ/view?utm_content=DAG_5HpKGIc&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hff98d32848#3" class="sample-link" target="_blank" rel="noopener">View Sample ↗</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- APPROACH -->
+<section id="approach">
+  <div class="fade-in">
+    <p class="section-label">My approach</p>
+    <h2 class="section-title">How I design learning</h2>
+    <p style="color:#666; line-height:1.75; max-width:620px;">I follow a structured, evidence-based design process — always starting with the performance gap, not the solution. Every design decision is grounded in adult learning principles and aligned to real organizational outcomes.</p>
+  </div>
+  <div class="process-grid">
+    <div class="process-step fade-in">
+      <div class="step-num">01</div>
+      <div class="step-name">Analyse</div>
+      <p class="step-desc">Training needs analysis, stakeholder consultation, and learner assessment to surface the real performance gap.</p>
+    </div>
+    <div class="process-step fade-in" style="transition-delay:0.1s">
+      <div class="step-num">02</div>
+      <div class="step-name">Design</div>
+      <p class="step-desc">Learning objectives, content sequencing, modality selection, and EDI-informed design considerations.</p>
+    </div>
+    <div class="process-step fade-in" style="transition-delay:0.2s">
+      <div class="step-num">03</div>
+      <div class="step-name">Develop</div>
+      <p class="step-desc">Storyboards, eLearning modules, facilitator guides, job aids — built with Storyline, Rise, Canva, and more.</p>
+    </div>
+    <div class="process-step fade-in" style="transition-delay:0.3s">
+      <div class="step-num">04</div>
+      <div class="step-name">Evaluate</div>
+      <p class="step-desc">Learner feedback, completion metrics, and Kirkpatrick-informed evaluation to drive continuous improvement.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-box fade-in">
+    <p class="section-label" style="color:#a8d5c4;">Let's connect</p>
+    <h2 class="section-title">Open to L&amp;D roles &amp; consulting projects</h2>
+    <p>If you're building a learning function, launching a new program, or need an experienced instructional designer — I'd love to talk.</p>
+    <div class="contact-actions">
+      <a href="mailto:adoraigunmaowork@gmail.com" class="btn-white">adoraigunmaowork@gmail.com</a>
+      <a href="https://linkedin.com/in/igunma-adora/" class="btn-outline-white" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Adora Igunma &nbsp;·&nbsp; Learning &amp; Development Specialist &nbsp;·&nbsp; Instructional Designer &nbsp;·&nbsp; Remote-Ready</p>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
